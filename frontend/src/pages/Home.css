@@ -4,8 +4,8 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: transparent; /* Transparent instead of white */
-  color: #e0e0e0; /* Light text for dark backgrounds */
+  background: transparent;
+  color: #e0e0e0;
 }
 
 .home-container::before {
@@ -46,29 +46,59 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05); /* Transparent glass effect */
-  border: 2px solid rgba(179, 136, 255, 0.3);
-  backdrop-filter: blur(8px);
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   width: 250px;
   padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  z-index: 0;
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #b388ff; /* Light purple heading */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(270deg, #d1b3ff, #b388ff, #8000ff, #b388ff, #d1b3ff);
+  background-size: 400% 400%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+  animation: borderRun 4s linear infinite;
 }
 
-.card p {
-  color: #ddd;
+@keyframes borderRun {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 15px 40px rgba(128, 0, 255, 0.5);
-  border-color: #8000ff;
+}
+
+.card h3,
+.card p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
 
 .coming-soon {
@@ -82,7 +112,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  background: rgba(255, 255, 255, 0.05); /* Transparent glass effect */
+  background: rgba(255, 255, 255, 0.05);
   padding: 30px;
   border-radius: 15px;
   border: 2px solid rgba(179, 136, 255, 0.3);

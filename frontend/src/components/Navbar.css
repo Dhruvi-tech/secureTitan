@@ -3,13 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: rgba(138, 55, 255, 0.462); /* ✅ greyish white with transparency */
-  backdrop-filter: blur(10px);
+  background: transparent; /* ✅ fully transparent */
+  backdrop-filter: none;   /* ✅ no blur effect */
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle light border */
+  border: none;           /* ✅ no border */
   flex-wrap: wrap;
 }
-
 
 .logo-container {
   display: flex;
@@ -20,7 +19,6 @@
   height: 60px; /* ⬆️ was 40px, now larger */
   margin-right: 10px;
 }
-
 
 .navbar h2 {
   color: white;
