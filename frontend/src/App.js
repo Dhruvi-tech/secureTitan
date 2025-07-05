@@ -42,16 +42,17 @@ function App() {
        </div>
 
       {/* 🔷 Main Layout */}
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/notes" element={<Notes />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
+     <Navbar />
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/notes" element={<Notes />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<Contact />} />
+  </Routes>
+  <Footer />
+</Router>
   );
 }
+    
 
 export default App;
