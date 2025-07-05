@@ -43,7 +43,7 @@
 .nav-links a:hover {
   color: #d1b3ff;
   transform: translateY(-2px);
-}
+} /* ✅ Make sure this closing brace exists */
 
 @media (max-width: 768px) {
   .navbar {
@@ -62,3 +62,4 @@
   .nav-links a {
     margin: 8px 0;
   }
+}
