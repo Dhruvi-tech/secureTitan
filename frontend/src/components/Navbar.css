@@ -16,8 +16,10 @@
 }
 
 .logo-image {
-  height: 60px; /* ⬆️ was 40px, now larger */
-  margin-right: 10px;
+ height: 100px;           /* Bigger Logo */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
 }
 
 .navbar h2 {
@@ -60,4 +62,3 @@
   .nav-links a {
     margin: 8px 0;
   }
-}
