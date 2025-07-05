@@ -37,6 +37,9 @@ function App() {
           <span key={index} className={`scanner-letter letter-${index}`}>{char}</span>
         ))}
       </div>
+      <div className="logo-card">
+      <img src="/LOGO.png" alt="SecureTitan Logo" className="logo-image" />
+       </div>
 
       {/* 🔷 Main Layout */}
       <Navbar />
