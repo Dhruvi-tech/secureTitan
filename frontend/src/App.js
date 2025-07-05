@@ -13,13 +13,32 @@ function App() {
 
   return (
     <Router>
-      {/* Background text */}
+      {/* 🔷 Logo Card at Top-Left */}
+      <div style={{
+        position: "absolute",
+        top: "20px",
+        left: "20px",
+        padding: "10px",
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        borderRadius: "12px",
+        boxShadow: "0 0 10px rgba(0,0,0,0.3)",
+        zIndex: "1000"
+      }}>
+        <img
+          src="/LOGO.png"
+          alt="SecureTitan Logo"
+          style={{ height: "60px", width: "auto" }}
+        />
+      </div>
+
+      {/* 🔷 Background Text */}
       <div className="background-text">
         {backgroundText.split("").map((char, index) => (
           <span key={index} className={`scanner-letter letter-${index}`}>{char}</span>
         ))}
       </div>
 
+      {/* 🔷 Main Layout */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
