@@ -23,28 +23,19 @@ body {
 }
 
 .logo-card {
-  position: absolute;
-  top: 100px; /* Slightly more space from navbar */
-  left: 40px;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 20px 30px;
-  border-radius: 25px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(14px);
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.logo-card:hover {
-  transform: scale(1.05);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  padding: 0;
+  z-index: 9999;
 }
 
 .logo-image {
-  height: 140px;   /* Make logo larger */
+  height: 160px; /* Make it bigger */
   width: auto;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
 }
 
 .scanner-letter {
