@@ -24,21 +24,29 @@ body {
 
 .logo-card {
   position: absolute;
-  top: 80px;              /* Moved below the navbar */
+  top: 100px; /* Slightly more space from navbar */
   left: 40px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 15px 25px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(14px);
   z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: scale(1.05);
 }
 
 .logo-image {
-  height: 100px;         /* Large enough to look like a real logo */
+  height: 140px;   /* Make logo larger */
   width: auto;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
+
 .scanner-letter {
   display: inline-block;
   position: relative;
